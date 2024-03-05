@@ -10,7 +10,7 @@ st.header("Decision Tree for classification")
 df = pd.read_csv("./data/iris.csv")
 st.write(df.head(10))
 
-#features=['sepal.length', 'sepal.width', 'petal.length', 'petal.width']
+features=['sepal.length', 'sepal.width', 'petal.length', 'petal.width']
 X = df.drop('variety',axis=1)
 y = df['variety']
 
@@ -34,4 +34,8 @@ y_predict=dtree.predict(x_test)
 score = accuracy_score(y_test, y_predict)  
 st.write(f'ความแม่นยำในการพยากรณ์{(score*100)} %')  
 
+fig, ax = plt.subplots(figsize=(12, 8))
+tree.plot_tree(dtree, feature_names=features, ax=ax)
+
+st.pyplot(fig)
 #tree.plot_tree(dtree, feature_names=features)
