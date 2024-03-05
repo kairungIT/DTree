@@ -21,7 +21,7 @@ dtree =ModelDtree.fit(x_train,y_train)
 if st.button("พยากรณ์"):
     x_input=[[2.3,4.3,5.0,6.0]] # ใส่ข้อมูลสำหรับการจำแนกข้อมูล
     y_predict2=dtree.predict(x_input)
-    print(y_predict2)
+    st.write(y_predict2)
     st.button("ไม่พยากรณ์")
 else:
     st.button("ไม่พยากรณ์")
