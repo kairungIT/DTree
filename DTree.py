@@ -18,12 +18,11 @@ x_train,x_test,y_train,y_test =train_test_split(X,y,test_size=0.3,random_state=2
 ModelDtree = DecisionTreeClassifier()
 dtree =ModelDtree.fit(x_train,y_train)
 
-y_predict=dtree.predict(x_test)
-score = accuracy_score(y_test, y_predict)  
-print(score)  
-
-x_input=[[2.3,4.3,5.0,6.0]] # ใส่ข้อมูลสำหรับการจำแนกข้อมูล
-y_predict2=dtree.predict(x_input)
-print(y_predict2)
-
+if st.button("พยากรณ์"):
+    x_input=[[2.3,4.3,5.0,6.0]] # ใส่ข้อมูลสำหรับการจำแนกข้อมูล
+    y_predict2=dtree.predict(x_input)
+    print(y_predict2)
+    st.button("ไม่พยากรณ์")
+else:
+    st.button("ไม่พยากรณ์")
 #tree.plot_tree(dtree, feature_names=features)
