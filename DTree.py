@@ -28,6 +28,6 @@ else:
 
 y_predict=dtree.predict(x_test)   
 score = accuracy_score(y_test, y_predict)  
-st.write(f'ความแม่นยำในการพยากรณ์{(score*100)}')  
+st.write(f'ความแม่นยำในการพยากรณ์{(score*100)} %')  
 
 #tree.plot_tree(dtree, feature_names=features)
