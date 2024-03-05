@@ -10,7 +10,7 @@ st.header("Decision Tree for classification")
 df = pd.read_csv("./data/iris.csv")
 st.write(df.head(10))
 
-features=['sepal.length', 'sepal.width', 'petal.length', 'petal.width']
+#features=['sepal.length', 'sepal.width', 'petal.length', 'petal.width']
 X = df.drop('variety',axis=1)
 y = df['variety']
 
