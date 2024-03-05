@@ -17,9 +17,13 @@ y = df['variety']
 x_train,x_test,y_train,y_test =train_test_split(X,y,test_size=0.3,random_state=200)
 ModelDtree = DecisionTreeClassifier()
 dtree =ModelDtree.fit(x_train,y_train)
-
+st.subheader("กรุณาป้อนข้อมูลเพื่อพยากรณ์")
+spW=st.number_input('Insert sepalwidth')
+spL=st.number_input('Insert sepallength')
+ptW=st.number_input('Insert petalwidth')
+ptL=st.number_input('Insert petallength')
 if st.button("พยากรณ์"):
-    x_input=[[2.3,4.3,5.0,6.0]] # ใส่ข้อมูลสำหรับการจำแนกข้อมูล
+    x_input=[[spW,spL,ptW,ptL]] # ใส่ข้อมูลสำหรับการจำแนกข้อมูล
     y_predict2=dtree.predict(x_input)
     st.write(y_predict2)
     st.button("ไม่พยากรณ์")
