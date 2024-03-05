@@ -26,4 +26,4 @@ x_input=[[2.3,4.3,5.0,6.0]] # ใส่ข้อมูลสำหรับก�
 y_predict2=dtree.predict(x_input)
 print(y_predict2)
 
-tree.plot_tree(dtree, feature_names=features)
+#tree.plot_tree(dtree, feature_names=features)
