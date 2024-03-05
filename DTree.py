@@ -25,4 +25,9 @@ if st.button("พยากรณ์"):
     st.button("ไม่พยากรณ์")
 else:
     st.button("ไม่พยากรณ์")
+
+y_predict=dtree.predict(x_test)   
+score = accuracy_score(y_test, y_predict)  
+st.write(score)  
+
 #tree.plot_tree(dtree, feature_names=features)
